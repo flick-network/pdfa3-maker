@@ -1,0 +1,42 @@
+{
+  "name": "pdfa3-maker",
+  "version": "0.0.1",
+  "description": "Convert your not-so-fancy PDF to an ISO 19005-3 specified PDF/A-3",
+  "main": "dist/pdfa3-maker.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "node build.js && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flick-network/pdfa3-maker.git"
+  },
+  "keywords": [
+    "pdfa",
+    "pdfa3",
+    "convert",
+    "iso",
+    "pdfa-3a",
+    "pdfa-3b"
+  ],
+  "author": "flick",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "bugs": {
+    "url": "https://github.com/flick-network/pdfa3-maker/issues"
+  },
+  "homepage": "https://github.com/flick-network/pdfa3-maker#readme",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
