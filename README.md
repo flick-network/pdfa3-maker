@@ -16,6 +16,38 @@ npm install pdfa3-maker
 
 ## Usage
 
+In Typescript, you can use it like:
+```typescript
+    import { makePDFA3, A3Options } from 'pdfa3-maker';
+    import fs from 'fs';
+
+    async function main() {
+    // Define the PDF/A-3 options
+    const options: A3Options = {
+        author: 'Your Name',
+        title: 'My PDF/A-3 Document',
+    };
+
+    // Load a PDF from base64
+    const base64Pdf = '...'; // Replace with your base64-encoded PDF
+
+    try {
+        const result = await makePDFA3(base64Pdf, options);
+
+        // Save the PDF/A-3 to a file
+        fs.writeFileSync('output.pdf', result, 'base64');
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+    }
+
+    main();
+
+```
+
+Now to use it in Javascript, you may implement like:
+
 ```javascript
 const { makePDFA3 } = require('pdfa3-maker');
 const fs = require('fs');
@@ -44,7 +76,7 @@ makePDFA3(base64Pdf, options)
 or else you can directly receive base64 in your project:
 
 ```javascript
-const pdfa3Base64 = await makePDFA3(base64Pdf, options);
+    const pdfa3Base64 = await makePDFA3(base64Pdf, options);
 ```
 
 ## Options
@@ -52,8 +84,8 @@ const pdfa3Base64 = await makePDFA3(base64Pdf, options);
 The makePDFA3 function accepts the following options:
 
 ```console
-author (string): The author's name for the PDF.
-title (string): The title of the PDF document.
+author : (string) - The author's name for the PDF.
+title  : (string) - The title of the PDF document.
 ```
 
 ## License
